@@ -1,0 +1,22 @@
+.card {
+  border: 1px solid #ccc;
+  border-radius: 2px;
+}
+
+.card-foundation {
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  background-color: #f7f3e8;
+}
+
+.card-inner-small {
+  padding: 4px 12px;
+}
+
+.card-inner-medium {
+  padding: 8px 16px;
+}
+
+.card-inner-large {
+  padding: 16px 24px;
+}
