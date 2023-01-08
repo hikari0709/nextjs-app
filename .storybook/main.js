@@ -6,26 +6,27 @@ module.exports = {
   addons: [
     '@storybook/addon-links',
     '@storybook/addon-essentials',
-    '@storybook/addon-interactions',
-    '@storybook/addon-postcss',
+    '@storybook/addon-postcss'
   ],
-  framework: '@storybook/react',
+  staticDirs: ['public'],
   core: {
-    builder: '@storybook/builder-webpack5'
+    builder: 'webpack5'
   },
-  babel: async options => ({
+  babel: async (options) => ({
     ...options,
     plugins: [
       '@babel/plugin-proposal-class-properties',
       '@babel/plugin-proposal-private-methods',
-      '@babel/plugin-proposal-private-property-in-object',
-    ],
+      '@babel/plugin-proposal-private-property-in-object'
+    ]
   }),
   webpackFinal: async (config) => {
     config.resolve.plugins = [
       new TsconfigPathsPlugin({
         configFile: path.resolve(__dirname, '../tsconfig.json')
-      }),
+      })
     ];
-  },
+
+    return config;
+  }
 };
