@@ -1,6 +1,12 @@
 import { addDecorator } from '@storybook/react';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import { theme } from '../src/themes';
+import * as nextImage from 'next/image';
+
+Object.defineProperty(nextImage, 'default', {
+  configurable: true,
+  value: (props) => <img {...props} />
+});
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
