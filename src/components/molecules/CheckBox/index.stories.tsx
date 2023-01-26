@@ -1,14 +1,12 @@
-import React, { useState } from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import CheckBox from './index';
-import Box from '../../layout/Box';
 
 export default {
   title: 'Molecules/CheckBox',
   argTypes: {
     label: {
       control: { type: 'text' },
-      description: 'ラベル',
+      description: '表示ラベル',
       table: {
         type: { summary: 'text' }
       }
@@ -33,6 +31,5 @@ const Template: ComponentStory<typeof CheckBox> = (args) => (
   <CheckBox {...args} />
 );
 
-export const withLabel = Template.bind({});
-withLabel.args = { label: 'Label' };
-ass
+export const WithLabel = Template.bind({});
+WithLabel.args = { label: 'Label' };
