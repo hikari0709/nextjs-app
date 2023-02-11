@@ -32,7 +32,7 @@ const BadgeIconButton = ({
     <BadgeIconButtonWrapper size={size}>
       {icon}
       {badgeContent && (
-        <BadgeWrapper data-tsetid='badge-wrapper'>
+        <BadgeWrapper data-tsetid="badge-wrapper">
           <Badge
             content={`${badgeContent}`}
             backgroundColor={badgeBackgroundColor}
@@ -42,3 +42,5 @@ const BadgeIconButton = ({
     </BadgeIconButtonWrapper>
   );
 };
+
+export default BadgeIconButton;
